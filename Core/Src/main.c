@@ -51,12 +51,12 @@ static void gpio_init(void){
 	GPIOC->CRH |= (GPIO_CRH_MODE13_1 | GPIO_CRH_MODE13_0); //output 50 MHz
 	GPIOC->CRH |= GPIO_CRH_CNF13_0; // push-pull (CNF13[1:0] = 00)
 
-	/* Config LED3 Pin PA2 */
+	/* Config LED1 Pin PA2 */
 	GPIOA->CRL &= ~(GPIO_CRL_MODE2 | GPIO_CRL_CNF2); // Clear bit cho PA3
 	GPIOA->CRL |= (GPIO_CRL_MODE2_1 | GPIO_CRL_MODE2_0); // Output mode, max speed 50 MHz
 	GPIOA->CRL |= GPIO_CRL_CNF2_0; // General purpose output push-pull
 
-	/* Config LED4 Pin PA4 */
+	/* Config LED2 Pin PA4 */
 	GPIOA->CRL &= ~(GPIO_CRL_MODE4 | GPIO_CRL_CNF4); // Clear bit cho PA4
 	GPIOA->CRL |= (GPIO_CRL_MODE4_1 | GPIO_CRL_MODE4_0); // Output mode, max speed 50 MHz
 	GPIOA->CRL |= GPIO_CRL_CNF4_0; // General purpose output push-pull
